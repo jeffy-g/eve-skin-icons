@@ -36,14 +36,21 @@ yarn add eve-skin-icons
 
 After installing the package, use the `eve-skin-icons-unpack` command to extract the skin icon images into a local directory:
 
-```bash
-npx eve-skin-icons-unpack ./icons
-```
+```shell
+npx eve-skin-icons-unpack -d ./icons
+````
 
 This command will unzip the skin icon images into the specified directory (`./icons` in this example).
 
 #### CLI Options:
-- `[output directory]` : The directory where you want to extract the images. If not provided, the images will be unpacked into the `<CWD>/skin-icons`.
+
+* `-d, -dest <directory>`
+  The directory where you want to extract the images. If not provided, the images will be unpacked into the `<CWD>/skin-icons`.
+
+* `-v, -verbose`
+  Enable verbose logging output during extraction. Useful for debugging or inspection.
+
+> You can mix positional and named options. Named options override positional ones if both are specified.
 
 
 
