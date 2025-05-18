@@ -56,6 +56,14 @@ function main(destDir) {
     console.log(msg);
     failed && process.exit(1);
 }
+/**
+ * @typedef TArgs
+ * @prop {true} [v] verbose flag (shorten)
+ * @prop {true} [verbose] verbose flag
+ * @prop {string} [d] specify output directory (shorten)
+ * @prop {string} [dest] specify output directory
+ */
+/** @type {ReturnType<typeof tinArgs<TArgs>>} */
 const opt = tinArgs();
 console.log(opt);
 const dest = opt.d || opt.dest || "./skin-icons";
