@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 /*!
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 //  Copyright (C) 2025 jeffy-g <hirotom1107@gmail.com>
