@@ -11,6 +11,7 @@
     "bin",
     "skin-map*.mjs",
     "skin-icons.zip",
+    "LICENSE",
     "README.md"
   ],
   "engines": {
