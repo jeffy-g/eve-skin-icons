@@ -8,16 +8,19 @@
 */
 /**
  * @file scripts/unpack-icons.mts
- * @command bun scripts/unpack-icons.mts [-d ./images/skins -v]
+ * @command node scripts/unpack-icons.mjs [-d ./images/skins -v]
  */
 import * as fs from "fs";
 import * as path from "path";
 import { unzipSync } from "fflate";
-import tinArgs from "tin-args"; // global install
+import tinArgs from "tin-args";
 import { fileURLToPath } from "url";
 // support node v12 later (import.meta.url)
 const __filename = fileURLToPath(import.meta.url);
 const ROOT = path.resolve(path.dirname(__filename), "..");
+/**
+ * @param {string} destDir
+ */
 function main(destDir) {
     const zipName = "skin-icons.zip";
     const zipPath = path.join(ROOT, zipName);
