@@ -16,8 +16,10 @@ import { unzipSync } from "fflate";
 import tinArgs from "tin-args";
 import { fileURLToPath } from "url";
 // support node v12 later (import.meta.url)
-const __filename = fileURLToPath(import.meta.url);
-const ROOT = path.resolve(path.dirname(__filename), "..");
+// (c)urrent (m)odule (p)ath
+const __cmp = fileURLToPath(import.meta.url);
+const ROOT = path.resolve(path.dirname(__cmp), "..");
+const log = console.log;
 /**
  * @param {string} destDir
  */
@@ -29,7 +31,7 @@ function main(destDir) {
     }
     const verbose = opt.v || opt.verbose;
     let failed;
-    console.log(`Unpacking ${zipPath} → ${destDir}`);
+    log(`Unpacking ${zipPath} → ${destDir}`);
     try {
         // Prepare output directory
         fs.mkdirSync(destDir, { recursive: true });
@@ -40,7 +42,7 @@ function main(destDir) {
         for (const [pngFile, uint8] of Object.entries(files)) {
             const outPath = path.join(destDir, pngFile);
             if (verbose) {
-                console.log(`  ↳ ${pngFile}`);
+                log(`  ↳ ${pngFile}`);
             }
             fs.writeFileSync(outPath, Buffer.from(uint8));
         }
@@ -56,7 +58,7 @@ function main(destDir) {
     const msg = failed
         ? "⚠️  Unpack failed. Please check the error details above."
         : "✅ Unpack complete.";
-    console.log(msg);
+    log(msg);
     failed && process.exit(1);
 }
 /**
@@ -68,7 +70,7 @@ function main(destDir) {
  */
 /** @type {ReturnType<typeof tinArgs<TArgs>>} */
 const opt = tinArgs();
-console.log(opt);
+log(opt);
 const dest = opt.d || opt.dest || "./skin-icons";
 if (dest) {
     // usage: node bin/unpack-icons.mjs -d ./images/skins -v
