@@ -1,6 +1,6 @@
 {
   "name": "eve-skin-icons",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Skin icon images from the EVE Online client, packaged as an easy‑to‑install npm module for third‑party sites and custom web applications.",
   "type": "module",
   "types": "index.d.ts",
@@ -36,6 +36,6 @@
   "homepage": "https://github.com/jeffy-g/eve-skin-icons#readme",
   "dependencies": {
     "fflate": "^0.8.2",
-    "tin-args": "^0.1.3"
+    "tin-args": "^0.1.4"
   }
 }
