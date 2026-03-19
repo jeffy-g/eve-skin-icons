@@ -81,9 +81,9 @@ export const resolveTypeImageURL = (typeId: number | string, size = 32) => {
 
 ## Select Your SkinMap Version
 
-- **`skin-map.mjs`**: Fully unpacked for instant access, but larger in size (203.26 KB, `import { SkinMap } from "eve-skin-icons/skin-map.mjs"`).  
-- **`skin-map-next.mjs`**: Text-compressed format, lightweight (114.13 KB, `import { SkinMap } from "eve-skin-icons/skin-map-next.mjs"`).  
-- **`skin-map-compress.mjs`**: Ultra-lightweight with gzip + Base64 encoding (35.17 KB, default when using `import { SkinMap } from "eve-skin-icons"`).
+- **`skin-map.mjs`**: Fully unpacked for instant access, but larger in size (203.60 KB, `import { SkinMap } from "eve-skin-icons/skin-map.mjs"`).  
+- **`skin-map-next.mjs`**: Text-compressed format, lightweight (114.32 KB, `import { SkinMap } from "eve-skin-icons/skin-map-next.mjs"`).  
+- **`skin-map-compress.mjs`**: Ultra-lightweight with gzip + Base64 encoding (35.23 KB, default when using `import { SkinMap } from "eve-skin-icons"`).
 
 ---
 
